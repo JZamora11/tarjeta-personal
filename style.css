@@ -1,0 +1,323 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #13112b;
+    opacity: 1;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg, #100e21 0, #100e21 1px, #13112b 0, #13112b 50%);
+    color: #fff;
+    height: 100vh;
+    margin: auto;
+    place-content: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: -.5em;
+}
+
+h2{
+    font-size: 1.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.header-1 {
+    background: #97dff5;
+    max-width: 950px;
+    color: #13112b;
+    border-radius: 15px;
+    text-align: left;
+    margin: 0 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.main-photo {
+    border-radius: 100%;
+    width: 100%;
+    max-width: 25%;
+    margin: 40px 0 40px 30px;
+    transition: .2s;
+}
+
+.main-photo:hover {
+    opacity: 80%;
+    transition: .2s;
+}
+
+.description {
+    font-weight: 200;
+}
+
+.info {
+    margin: 0 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    text-align: center;
+    margin: 0 30px 0;
+}
+
+main section {
+    margin: auto;
+    place-content: center;
+    padding: 15px;
+    color: #13112b;
+    
+    & h2 {
+        margin: 0 0 10px 0;
+    }
+    
+    & p {
+        margin: 0 0 5px 0;
+    }
+    
+    & div {
+        margin: 0 0 5px 0;
+    }
+    
+    & section {
+        padding: 0;
+    }
+}
+
+#habilidades, #contacto, #enlaces {
+    background: #f8f8f8;
+    border-radius: 8px;
+    margin: 20px 0px;
+    height: 150px;
+    width: 250px;
+}
+
+#contacto {
+    overflow: auto;
+}
+
+#habilidades .lenguajes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    & .html1 {
+        width: 45px;
+        height: 45px;
+        background-color: #e54c21;
+        color: #fff;
+        border-radius: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+
+    & .css1 {
+        width: 45px;
+        height: 45px;
+        background-color: #1a62b0;
+        color: #fff;
+        border-radius: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+
+    & .js1 {
+        width: 45px;
+        height: 45px;
+        background-color: #f7df1e;
+        color: #000;
+        border-radius: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+
+    & .html1:hover, .css1:hover, .js1:hover {
+        border-radius: 100%;
+        transition: .3s;
+    }
+
+    & div i {
+        font-size: 25px;
+    }
+}
+
+#enlaces .redes {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    & .linkedin {
+        background-color: #0E76A8;
+    }
+    & a .linkedin i {
+        color: #fff;
+    }
+
+    & .github {
+        background-color: #171515;
+    }
+    & a .github i {
+        color: #fff;
+    }
+
+    & .portfolio {
+        background-color: #0b2a88;
+    }
+    & a .portfolio i {
+        color: #fff;
+    }
+}
+
+#enlaces .redes a button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: transparent;
+    cursor: pointer;
+
+    & a i {
+        font-size: 15px;
+    }
+}
+
+#enlaces .redes a button:hover {
+    opacity: .5;
+}
+
+.download-cv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    gap: 15px;
+}
+
+.cv {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #97dff5;
+    padding: 15px;
+    text-decoration: none;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cv:hover {
+    background-color: #26819c;
+    color: #fff;
+    transition: .3s;
+}
+
+/* RESPONSIVE WEB DESIGN */
+@media screen and (max-width: 768px) {
+    .header-1 {
+        max-width: 90%;
+        flex-direction: column;
+        margin: 30px 0 0;
+    }
+
+    .main-photo {
+        margin: 20px 0 0 0;
+        max-width: 35%;
+    }
+
+    .info {
+        text-align: center;
+        font-size: .90em;
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+
+    main {
+        margin: 20px 0 20px;
+        place-items: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #habilidades, #contacto, #enlaces {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 60%;
+    }
+
+    .cv {
+        margin: 0 0 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-1 {
+        max-width: 90%;
+        flex-direction: column;
+        margin: 24px 0 0;
+    }
+
+    .main-photo {
+        margin: 30px 0 0 0;
+        max-width: 60%;
+    }
+
+    .info {
+        text-align: center;
+        font-size: .75em;
+    }
+
+    .description {
+        font-size: 1.4em;
+        padding-bottom: 10px;
+    }
+
+    main {
+        margin: 20px 0 20px;
+        place-items: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #habilidades, #contacto, #enlaces {
+        margin: 10px 0;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .download-cv {
+        margin: auto;
+        flex-direction: column;
+        max-width: 60%;
+        gap: 0;
+    }
+
+    .cv {
+        margin: 0;
+    }
+
+    .ver-cv {
+        margin: 0 0 15px;
+    }
+
+    .descargar-cv {
+        margin: 0 0 40px;
+    }
+}

@@ -6,8 +6,8 @@ body{
     background-image: repeating-linear-gradient(45deg, #100e21 0, #100e21 1px, #13112b 0, #13112b 50%);
     color: #fff;
     height: 100vh;
-    margin: auto;
-    place-content: center;
+    margin: 0;
+    align-content: center;
 }
 
 h1 {
@@ -42,16 +42,17 @@ a {
 
 
 .main-photo {
+    border: #88d0e6 solid 5px;
     border-radius: 100%;
     width: 100%;
     max-width: 25%;
     margin: 40px 0 40px 30px;
-    transition: .2s;
+    transition: .3s;
 }
 
 .main-photo:hover {
-    opacity: 80%;
-    transition: .2s;
+    filter: brightness(0.9);
+    transition: .3s;
 }
 
 .description {
@@ -75,29 +76,24 @@ main section {
     place-content: center;
     padding: 15px;
     color: #13112b;
-    
-    & h2 {
-        margin: 0 0 10px 0;
-    }
-    
-    & p {
-        margin: 0 0 5px 0;
-    }
-    
-    & div {
-        margin: 0 0 5px 0;
-    }
-    
-    & section {
-        padding: 0;
-    }
+}
+
+main section h2 {
+    margin: 0 0 10px 0;
+}
+
+main section p, div {
+    margin: 0 0 5px 0;
+}
+
+main section section {
+    padding: 0;
 }
 
 #habilidades, #contacto, #enlaces {
     background: #f8f8f8;
     border-radius: 8px;
     margin: 20px 0px;
-    height: 150px;
     width: 250px;
 }
 
@@ -108,95 +104,89 @@ main section {
 #habilidades .lenguajes {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 5px;
+}
 
-    & .html1 {
-        width: 45px;
-        height: 45px;
-        background-color: #e54c21;
-        color: #fff;
-        border-radius: 6%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s;
-    }
+#habilidades .lenguajes div {
+    width: 45px;
+    height: 45px;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
 
-    & .css1 {
-        width: 45px;
-        height: 45px;
-        background-color: #1a62b0;
-        color: #fff;
-        border-radius: 6%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s;
-    }
+#habilidades .lenguajes .html1 {
+    background-color: #e54c21;
+    color: #fff;
+}
 
-    & .js1 {
-        width: 45px;
-        height: 45px;
-        background-color: #f7df1e;
-        color: #000;
-        border-radius: 6%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s;
-    }
+#habilidades .lenguajes .css1 {
+    background-color: #1a62b0;
+    color: #fff;
+}
 
-    & .html1:hover, .css1:hover, .js1:hover {
-        border-radius: 100%;
-        transition: .3s;
-    }
+#habilidades .lenguajes .js1 {
+    background-color: #f7df1e;
+    color: #000;
+}
 
-    & div i {
-        font-size: 25px;
-    }
+#habilidades .lenguajes .git1 {
+    background-color: #f1502f;
+    color: #fff;
+}
+
+#habilidades .lenguajes .github1 {
+    background-color: #171515;
+    color: #fff;
+}
+
+#habilidades .lenguajes div:hover {
+    border-radius: 100%;
+    transition: .3s;
+}
+
+#habilidades .lenguajes div i {
+    font-size: 25px;
 }
 
 #enlaces .redes {
     display: flex;
     justify-content: center;
     gap: 5px;
-
-    & .linkedin {
-        background-color: #0E76A8;
-    }
-    & a .linkedin i {
-        color: #fff;
-    }
-
-    & .github {
-        background-color: #171515;
-    }
-    & a .github i {
-        color: #fff;
-    }
-
-    & .portfolio {
-        background-color: #0b2a88;
-    }
-    & a .portfolio i {
-        color: #fff;
-    }
 }
 
-#enlaces .redes a button {
+#enlaces .redes .linkedin {
+    background-color: #0E76A8;
+}
+
+#enlaces .redes .github {
+    background-color: #171515;
+}
+
+#enlaces .redes .portfolio {
+    background-color: #0b2a88;
+}
+
+#enlaces .redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     border: transparent;
     cursor: pointer;
-
-    & a i {
-        font-size: 15px;
-    }
+    transition: .3s;
 }
 
-#enlaces .redes a button:hover {
-    opacity: .5;
+#enlaces .redes a:hover {
+    filter: brightness(0.7);
+    transition: .3s;
 }
 
 .download-cv {
